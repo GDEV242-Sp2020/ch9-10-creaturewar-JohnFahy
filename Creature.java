@@ -10,7 +10,7 @@
  * @version (version number or date here)
  */
 import java.util.Random;
-public class Creature
+public abstract class Creature
 {
     private int str;
     private int max_hp;
@@ -35,8 +35,9 @@ public class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       this.hp = 10;
-       this.str = 10;
+       max_hp = hp;
+        this.hp = hp;
+       this.str = str;
     }
     
     
@@ -78,7 +79,7 @@ public class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // implement this
+        hp = hp-damage;
     }
     
 }

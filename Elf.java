@@ -28,5 +28,18 @@ public class Elf extends Creature
         );
           
     }
+    
+    /**
+     * 10% chance for elf to double damage
+     * @return a value between 1 and str to be used to cause damage to another creature
+     */
+    public int damage(){
+        if (Randomizer.nextInt(9) == 0){
+         return 2*super.damage();   
+        }
+        else{
+        return super.damage();
+    }
+    }
 
 }

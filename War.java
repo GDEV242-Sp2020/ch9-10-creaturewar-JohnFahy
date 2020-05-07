@@ -19,8 +19,8 @@ public class War
 
     /**
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @This generates the armies.
+     * @
      */
     public void generateArmies(int numFighters)
     {   for(int i = 0; i < numFighters; i++){
@@ -93,5 +93,11 @@ public class War
         if (index1 > index2){
             System.out.println("Army 2 is victorious.");
         }
+        else if (index1 < index2){
+          System.out.println("Army 1 is victorious.");  
+        }
+        else{
+          System.out.println("All armies have fallen.");  
+        } 
     }
 }

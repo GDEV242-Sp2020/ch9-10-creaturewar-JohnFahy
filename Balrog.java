@@ -28,5 +28,14 @@ public class Balrog extends Creature
         );
           
     }
+    
+    /**
+     * Balrog attacks twice each round.
+     * @return a value between 1 and str to be used to cause damage to another creature
+     */
+    public int damage(){
+        return super.damage() + super.damage();
+    }
+    
 
 }
